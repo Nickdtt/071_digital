@@ -4,12 +4,14 @@ import "./globals.css";
 
 const istokWeb = Istok_Web({
   variable: "--font-istok-web",
-  weight: ["400", "700"]
+  weight: ["400", "700"],
+  subsets: ["latin"],
 });
 
 const inter = Inter({
   variable: "--font-inter",
-  weight: ["100", "300", "400", "700", "900"]
+  weight: ["100", "300", "400", "700", "900"],
+  subsets: ["latin"],
 });
 
 const geistSans = Geist({
