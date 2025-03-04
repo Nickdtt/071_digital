@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutUs() {
     return (
-        <div className="bg-[#F2FBEE] w-full flex flex-col justify-center items-center lg:flex-row-reverse lg:justify-between lg:items-center  px-[100.23px] py-[62.82px]" >
+        <div className="bg-[#F2FBEE] w-full flex flex-col justify-center items-center lg:flex-row-reverse lg:justify-between lg:items-center  px-[50.23px] py-[62.82px]" >
             <div className="w-full lg:w-2/3 lg:min-h-[522px]" >
                 <Image src="/bro.png" alt="about_us image" width={883} height={522} />
             </div>
