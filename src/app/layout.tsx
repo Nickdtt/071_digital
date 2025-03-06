@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Istok_Web, Inter } from "next/font/google";
 import "./globals.css";
+import { Menu, Search } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
 
 const istokWeb = Istok_Web({
   variable: "--font-istok-web",
@@ -39,7 +43,51 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${istokWeb.variable} ${inter.variable}  antialiased`}
       >
-        {children}
+        <div className="drawer drawer-end">
+          <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+          <div className="drawer-content flex flex-col">
+            <div className="relative w-full flex items-center justify-between p-4 h-[52px] md:h-[72px] shadow-[0px_1px_4px_0px_rgba(0,0,0,0.25)]">
+              <div className="flex justify-between items-center" >
+                <Image src="/logo_071.svg" alt="071 Soluções digitais" width={35} height={35} className="  md:w-[59px] md:h-[59px] " />
+                <h1 className="text-[16px] md:text-[24px] md:text-nowrap font-normal text-green-800 p-3 font-istok-web"><span className="text-[#DE3EA6]" >071 </span>Soluções digitais</h1>
+                <div className="hidden lg:flex lg:space-x-4 pl-4">
+                  <h2 className="text-[#4D4D4D] font-inter font-medium " >Serviços</h2>
+                  <h2 className="text-[#4D4D4D] font-inter font-medium" >Soluções</h2>
+                  <h2 className="text-[#4D4D4D] font-inter font-medium" >Orçamentos</h2>
+                  <h2 className="text-[#4D4D4D] font-inter font-medium" >Sobre nós</h2>
+                </div>
+              </div>
+
+              <div className="hidden lg:flex justify-between lg:space-x-4 lg:items-center ">
+                <Search className=" text-black text-[24px]" />
+                <Button className="btn bg-[#60884E] border-[2.78px] px-[22.78px] py-[9.74px]" >Entrar</Button>
+                <Button className="btn bg-[#316919] border-[2.78px] px-[22.78px] py-[9.74px] " >Cadastrar</Button>
+              </div>
+              <label htmlFor="my-drawer">
+                <Menu className="text-green-800 sm:hidden" />
+              </label>
+            </div>
+            {children}
+          </div>
+          <div className="drawer-side" >
+            <label htmlFor="my-drawer" className="drawer-overlay"></label>
+            
+            <ul className="menu p-4 w-80 h-full bg-[#F5F5F5]">
+            <h1>Menu</h1>
+              <li>
+                <Link href="/">Serviços</Link>
+              </li>
+              <li>
+                <Link href="/sobre">Orçamentos</Link>
+              </li>
+              <li>
+                <Link href="/contato">Sobre nós</Link>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
       </body>
     </html>
   );

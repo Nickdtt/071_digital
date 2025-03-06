@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Navbar() {
     return (
-        <div className="relative flex items-center justify-between p-4 h-[52px] md:h-[72px] shadow-[0px_1px_4px_0px_rgba(0,0,0,0.25)]">
+        <div className="relative flex items-center justify-between h-[52px] md:h-[72px] shadow-[0px_1px_4px_0px_rgba(0,0,0,0.25)]">
             <div className="flex justify-between" >
                 <Image src="/logo_071.svg" alt="071 Soluções digitais" width={35} height={35} className="  md:w-[59px] md:h-[59px] " />
                 <h1 className="text-[16px] md:text-[24px] md:text-nowrap font-normal text-green-800 p-3 font-istok-web"><span className="text-[#DE3EA6]" >071 </span>Soluções digitais</h1>
